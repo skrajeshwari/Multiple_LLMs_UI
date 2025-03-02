@@ -4,9 +4,10 @@ An interface with multiple options of LLMs provided to the user.
 
 # Install Dependancies
 
-%%capture: This is a Jupyter magic command that suppresses the output of the cell. It keeps the cell from printing installation progress and messages, making it look cleaner in a notebook environment.
+#Run in Bash
 
-!pip install openai langchain-openai langchain-core langchain-community sentence-transformers:
+#pip install openai langchain-openai langchain-core langchain-community sentence-transformers
+#pip install gradio
 
 openai: This package allows access to OpenAI’s models and APIs.
 
@@ -14,7 +15,7 @@ langchain-openai, langchain-core, langchain-community: These packages are part o
 
 sentence-transformers: A library for computing dense vector embeddings of text, useful for tasks like semantic search or similarity matching.
 
-!pip install gradio: Installs Gradio, a Python library for creating a user interface (UI) for machine learning models. Gradio makes it easy to design interactive web-based UIs without needing front-end development skills.
+pip install gradio: Installs Gradio, a Python library for creating a user interface (UI) for machine learning models. Gradio makes it easy to design interactive web-based UIs without needing front-end development skills.
 
 # Import required packages
 
