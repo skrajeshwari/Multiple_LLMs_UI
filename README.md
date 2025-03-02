@@ -1,13 +1,16 @@
 # Multiple_LLMs_UI
 
-An interface with multiple options of LLMs provided to the user.  
+An interface with multiple options of LLMs provided to the user. 
+
+# Add OPENAI_API_KEY in codespaces
+
+# Run in Bash
+
+pip install openai langchain-openai langchain-core langchain-community sentence-transformers
+pip install gradio
+python main.py
 
 # Install Dependancies
-
-#Run in Bash
-
-#pip install openai langchain-openai langchain-core langchain-community sentence-transformers
-#pip install gradio
 
 openai: This package allows access to OpenAI’s models and APIs.
 
