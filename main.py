@@ -1,6 +1,3 @@
-%%capture
-!pip install openai langchain-openai langchain-core langchain-community sentence-transformers
-!pip install gradio
 
 # Import required packages
 
@@ -14,11 +11,34 @@ from google.colab import userdata
 import gradio as gr
 from langchain.schema import HumanMessage, SystemMessage, AIMessage
 
-# Set OpenAI API Key
+# Read OpenAI key from Codespaces Secrets
 
-api_key = userdata.get('OA_API')
+#api_key = os.environ['OPENAI_NEWKEY']             # <-- change this as per your Codespaces secret's name
+#os.environ['OPENAI_API_KEY'] = api_key
+#openai.api_key = os.getenv('OPENAI_API_KEY')
+
+
+from dotenv import load_dotenv
+
+load_dotenv()
+
+# Debug print to check available environment variables
+print("Available environment variables:", os.environ)
+
+# Read OpenAI key from Codespaces Secrets
+api_key = os.environ.get('OPENAI_NEWKEY')
+print(f"Read OpenAI API key: {api_key}")
+
+if api_key:
+    print("OpenAI API key loaded successfully.")
+else:
+    print("Failed to load OpenAI API key.")
+
 os.environ['OPENAI_API_KEY'] = api_key
 openai.api_key = os.getenv('OPENAI_API_KEY')
+
+# Verify that OpenAI API key is set correctly
+print(f"OpenAI API Key: {openai.api_key}")
 
 # Load LLM Models
 
