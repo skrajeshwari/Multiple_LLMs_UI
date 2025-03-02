@@ -1,4 +1,3 @@
-
 # Import required packages
 
 import os
@@ -7,7 +6,6 @@ from langchain_core.prompts import PromptTemplate, ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_community.chat_message_histories import ChatMessageHistory
 from langchain_openai import ChatOpenAI
-from google.colab import userdata
 import gradio as gr
 from langchain.schema import HumanMessage, SystemMessage, AIMessage
 
